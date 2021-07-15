@@ -1,9 +1,9 @@
 from words import choose_word
 from image import IMAGES
-name=input("enter your name: ")
-print("Welcome",name,"!")
-print("try to guess the word ")
-print("_ _ _ _ _ _ _ _ ")
+name=input("enter your name= ")
+print("Welcome to Hangman Game ",name,"\U0001F917")
+print("Try to guess the word   ")
+print("_ _ _ _ _",name,"\U0001F618"," _ _ _ _ _ _ _")
 def hangman():
   secret_word=choose_word()
   guessmade=""
@@ -18,7 +18,7 @@ def hangman():
         main_word+="_ "
     if main_word==secret_word:
       print(main_word)
-      print("YOU WIN!","\U0001F929")
+      print("YOU WON!","\U0001F929")
       break
     print("guess the word",main_word)
     guess=input("=")
@@ -56,9 +56,9 @@ def hangman():
           print("--------------------")
           print(IMAGES[6])
         if turns==len(secret_word)-8:
-          print("you loose")
+          print("you Are loose The Game")
           print("--------------------")
           print(IMAGES[7])
-          print("The word was",secret_word,"Better Luck Next Time:(")
+          print("The word was",secret_word,"Better Luck Next Time:(","\U0001F62A")
           break        
 hangman()
